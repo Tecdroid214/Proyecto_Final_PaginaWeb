@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Gamer - Presentación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">TeddyWeb</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Portada</a></li>
+            <li><a href="referencias.html">Referencias</a></li>
+            <li><a href="objetivo.html">Objetivo</a></li>
+            <li><a href="modelo.html">Modelado 3D</a></li>
+        </ul>
+    </nav>
+
+    <div class="split-container">
+        
+        <section class="side left-side">
+            <div class="content">
+                <img src="assets/Imagenes_y_videos/foto_perfil.jpg" alt="Foto de Perfil" class="profile-img">
+                
+                <h1>TeddyFUNNADO</h1>
+                <p class="description">
+                    Artista 3D y Desarrollador.
+                    <br>
+                    "Transformando ideas en experiencias 3D."
+                </p>
+            </div>
+        </section>
+
+        <section class="side right-side">
+            <div class="content">
+                <h2 class="institution">INSTITUTO TECNOLÓGICO DE MÉRIDA</h2>
+                
+                <div class="info-block">
+                    <div class="info-item">
+                        <span class="label">Alumno:</span>
+                        <span class="value">David Moisés Gamboa Cel</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Maestro:</span>
+                        <span class="value">Rodrigo Fidel Gaxiola Sosa</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Matrícula:</span>
+                        <span class="value">E23080275</span>
+                    </div>
+                    <div class="info-item highlight">
+                        <span class="label">Proyecto:</span>
+                        <span class="value">Setup Gamer 3D (Blender)</span>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+    </div>
+
+    <script>
+        const leftSide = document.querySelector('.left-side');
+        const rightSide = document.querySelector('.right-side');
+
+        leftSide.addEventListener('mouseenter', () => {
+            leftSide.classList.add('active');
+            rightSide.classList.remove('active');
+        });
+
+        rightSide.addEventListener('mouseenter', () => {
+            rightSide.classList.add('active');
+            leftSide.classList.remove('active');
+        });
+    </script>
+
+</body>
+</html>
