@@ -237,3 +237,345 @@ h1 {
     background-color: #4a0072;
     transform: scale(1.05);
 }
+
+
+
+
+
+
+/* --- ESTILOS PÁGINA REFERENCIAS --- */
+
+
+/* --- 1. VARIABLES Y COLORES --- */
+:root {
+    --purple-gradient: linear-gradient(135deg, #2e003e 0%, #7b1fa2 100%);
+    --white: #ffffff;
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --btn-color: #7b1fa2;
+    --skew-deg: -10deg;
+    --speed: 0.6s;
+}
+
+/* --- 2. GENERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* ESTO ES LO QUE BLOQUEABA EL SCROLL GLOBALMENTE */
+    overflow: hidden; 
+    background-color: #000; 
+}
+
+/* === ARREGLO DEL SCROLL PARA REFERENCIAS === */
+body.page-referencias {
+    /* Forzamos que el body ocupe toda la altura y tenga su propio scroll */
+    height: 100vh;
+    overflow-y: auto !important; /* ¡IMPORTANTE! Habilita el scroll vertical */
+    overflow-x: hidden;
+    
+    background-color: #f4f4f4;
+    background-image: linear-gradient(180deg, #2e003e 0%, #4a0072 400px, #f4f4f4 400px);
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* El fondo se mueve al hacer scroll */
+}
+
+/* --- 3. BARRA DE NAVEGACIÓN --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+    background: rgba(15, 0, 30, 0.9); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+}
+
+.nav-links a.active {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid var(--btn-color);
+}
+
+/* --- 4. ESTILOS REFERENCIAS --- */
+
+.references-container {
+    max-width: 1000px;
+    margin: 120px auto 50px auto; 
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Tarjeta */
+.ref-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+.ref-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(106, 13, 173, 0.15);
+}
+
+/* Contenedor de Medios */
+.media-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* CUADROS RECTANGULARES */
+.media-box {
+    flex: 1; /* 50% ancho */
+    height: 250px; /* Altura fija rectangular */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 3px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.media-box:hover {
+    border-color: var(--btn-color);
+    transform: scale(1.02);
+}
+
+.media-box video, 
+.media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.media-box:hover img,
+.media-box:hover video {
+    transform: scale(1.1);
+}
+
+/* Overlay (Capa oscura al pasar mouse) */
+.media-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(46, 0, 62, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.media-box:hover .media-overlay {
+    opacity: 1;
+}
+
+.media-overlay .icon {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.media-overlay .text {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Descripción */
+.description-box {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description-box h3 {
+    color: #4a0072;
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.description-box p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- ESTILOS DEL VISOR (LIGHTBOX) --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.lightbox-content-wrapper {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2001;
+}
+.close-btn:hover { color: var(--btn-color); }
+
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 2001;
+}
+
+.prev-btn { left: 20px; border-radius: 3px 0 0 3px; }
+.next-btn { right: 20px; border-radius: 3px 0 0 3px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--btn-color);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .media-container {
+        flex-direction: column;
+    }
+    .media-box {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+
+/* ... MANTÉN TODO TU CSS ANTERIOR ... */
+
+/* ========================================= */
+/* === TRANSICIONES ENTRE ARCHIVOS HTML === */
+/* ========================================= */
+
+body {
+    /* Aseguramos que la animación sea suave */
+    transition: opacity 0.5s ease;
+    opacity: 1; /* Por defecto visible */
+}
+
+/* Clases para animar el cuerpo de la página */
+
+/* Animación: Deslizar hacia la IZQUIERDA (Salir) */
+.slide-out-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.6s;
+}
+
+/* Animación: Deslizar hacia la DERECHA (Salir) */
+.slide-out-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.6s;
+}
+
+/* Animación: Entrar desde la DERECHA (Al cargar) */
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Animación: Entrar desde la IZQUIERDA (Al cargar) */
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Estas clases se agregan al body automáticamente con JS al cargar */
+.page-enter-right {
+    animation: slideInFromRight 0.6s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.page-enter-left {
+    animation: slideInFromLeft 0.6s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+
+

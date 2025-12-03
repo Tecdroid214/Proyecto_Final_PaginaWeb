@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias - Setup Gamer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos para las flechas y la X (usamos caracteres simples o librería si prefieres) -->
+</head>
+<body class="page-referencias">
+
+    <!-- === BARRA DE NAVEGACIÓN === -->
+    <nav class="navbar">
+        <div class="logo">TeddyWeb</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Portada</a></li>
+            <li><a href="referencias.html" class="nav-item active">Referencias</a></li>
+            <li><a href="objetivo.html" class="nav-item">Objetivo</a></li>
+            <li><a href="modelo.html" class="nav-item">Modelado 3D</a></li>
+        </ul>
+    </nav>
+
+    <!-- === CONTENEDOR PRINCIPAL === -->
+    <main class="references-container">
+        
+        <h1 class="page-title">Referencias e Inspiración</h1>
+
+        <!-- === TARJETA 1 === -->
+        <article class="ref-card">
+            <div class="media-container">
+                <!-- Imagen (Izquierda) -->
+                
+
+                <!-- Video (Derecha) -->
+                <div class="media-box video-box gallery-item" onclick="openLightbox(0)">
+                    <video muted loop>
+                        <source src="assets/Imagenes_y_videos/video_referencia_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="media-overlay">
+                        <span class="icon">▶</span>
+                        <span class="text">Ver Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-box">
+                <h3>Diseño del Escritorio</h3>
+                <p>
+                    Para el modelado del escritorio, tomé como referencia este video de modelado "hard surface". 
+                    La imagen de la izquierda muestra la textura de madera realista.
+                </p>
+            </div>
+        </article>
+
+        <!-- === TARJETA 2 (Robby) === -->
+        <article class="ref-card">
+            <div class="media-container">
+                <!-- Imagen (Izquierda) -->
+                <div class="media-box image-box gallery-item" onclick="openLightbox(1)">
+                    <img src="assets/Imagenes_y_videos/robby/robbyImagen.jpg" alt="Referencia Iluminación">
+                    <div class="media-overlay">
+                        <span class="icon">🔍</span>
+                        <span class="text">Ver Imagen</span>
+                    </div>
+                </div>
+
+                <!-- Video (Derecha) -->
+                <div class="media-box video-box gallery-item" onclick="openLightbox(2)">
+                    <video muted loop>
+                        <source src="assets/Imagenes_y_videos/robby/robbyVideo.mp4" type="video/mp4">
+                    </video>
+                    <div class="media-overlay">
+                        <span class="icon">▶</span>
+                        <span class="text">Ver Video</span>
+                    </div>
+                </div>
+            </div>
+            <div class="description-box">
+                <h3>ROBBY</h3>
+                <p>
+                    Este ha sido un personaje que he creado en 2020 para una materia de artes en la prepa
+                    en el cual fue para un concurso en videollamada y el cual le apode como <strong>Robby</strong>.
+                    Esta hecho de carton y hojas de papel de colores para dar ese aspecto de un payaso robot.
+                </p>
+            </div>
+        </article>
+
+        <!-- === TARJETA 3 (Ventilador) === -->
+        <article class="ref-card">
+            <div class="media-container">
+                <div class="media-box image-box gallery-item" onclick="openLightbox(3)">
+                    <!-- Puedes cambiar esta imagen por otra -->
+                    <img src="assets/Imagenes_y_videos/ventilador/ventiladorImagen.jpg" alt="Detalle Textura">
+                    <div class="media-overlay"><span class="icon">🔍</span><span class="text">Ver Imagen</span></div>
+                </div>
+                <div class="media-box video-box gallery-item" onclick="openLightbox(4)">
+                    <!-- Puedes cambiar este video por otro -->
+                    <video muted loop><source src="assets/Imagenes_y_videos/ventilador/ventiladorVideo.mp4" type="video/mp4"></video>
+                    <div class="media-overlay"><span class="icon">▶</span><span class="text">Ver Video</span></div>
+                </div>
+            </div>
+            <div class="description-box">
+                <h3>Ventilador "HQ097"</h3>
+                <p>
+                    Este ventilador fue construido en la prepa en el 2018 pora una presentación de tecnólogia, en la
+                    cual participe con un compañero en ese momento y quedamos segundo lugar.
+                </p>
+            </div>
+        </article>
+
+        <!-- === TARJETA 4 (Tablet JOI) === -->
+        <article class="ref-card">
+            <div class="media-container">
+                <div class="media-box image-box gallery-item" onclick="openLightbox(5)">
+                    <!-- Puedes cambiar esta imagen por otra -->
+                    <img src="assets/Imagenes_y_videos/tablet/tabletImagen.jpg" alt="Detalle Textura">
+                    <div class="media-overlay"><span class="icon">🔍</span><span class="text">Ver Imagen</span></div>
+                </div>
+                <div class="media-box video-box gallery-item" onclick="openLightbox(6)">
+                    <!-- Puedes cambiar este video por otro -->
+                    <video muted loop><source src="assets/Imagenes_y_videos/tablet/tabletVideo.mp4" type="video/mp4"></video>
+                    <div class="media-overlay"><span class="icon">▶</span><span class="text">Ver Video</span></div>
+                </div>
+            </div>
+            <div class="description-box">
+                <h3>Detalles Finales</h3>
+                <p>
+                    Ajustes de post-procesado y corrección de color para darle el toque final al render.
+                </p>
+            </div>
+        </article>
+
+        <!-- === TARJETA 4 (Tablet JOI) === -->
+        <article class="ref-card">
+            <div class="media-container">
+                <div class="media-box image-box gallery-item" onclick="openLightbox(7)">
+                    <!-- Puedes cambiar esta imagen por otra -->
+                    <img src="assets/Imagenes_y_videos/laptop/laptopImagen.jpg" alt="Detalle Textura">
+                    <div class="media-overlay"><span class="icon">🔍</span><span class="text">Ver Imagen</span></div>
+                </div>
+                <div class="media-box video-box gallery-item" onclick="openLightbox(8)">
+                    <!-- Puedes cambiar este video por otro -->
+                    <video muted loop><source src="assets/Imagenes_y_videos/laptop/laptopVideo.mp4" type="video/mp4"></video>
+                    <div class="media-overlay"><span class="icon">▶</span><span class="text">Ver Video</span></div>
+                </div>
+            </div>
+            <div class="description-box">
+                <h3>Detalles Finales</h3>
+                <p>
+                    Ajustes de post-procesado y corrección de color para darle el toque final al render.
+                </p>
+            </div>
+        </article>
+
+    </main>
+
+    
+
+    <!-- === VISOR (LIGHTBOX) === -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <a class="prev-btn" onclick="changeMedia(-1)">&#10094;</a>
+        <div class="lightbox-content-wrapper">
+            <div id="lightbox-media-container"></div>
+        </div>
+        <a class="next-btn" onclick="changeMedia(1)">&#10095;</a>
+    </div>
+
+    <!-- SCRIPT DE GALERÍA -->
+    <script>
+        const items = document.querySelectorAll('.gallery-item');
+        let currentIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const container = document.getElementById('lightbox-media-container');
+
+        function openLightbox(index) {
+            currentIndex = index;
+            lightbox.style.display = 'flex';
+            showMedia(currentIndex);
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            container.innerHTML = '';
+        }
+
+        function changeMedia(direction) {
+            currentIndex += direction;
+            if (currentIndex >= items.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = items.length - 1;
+            showMedia(currentIndex);
+        }
+
+        function showMedia(index) {
+            const item = items[index];
+            container.innerHTML = '';
+            
+            const video = item.querySelector('video source');
+            const img = item.querySelector('img');
+
+            if (video) {
+                const newVideo = document.createElement('video');
+                newVideo.src = video.src;
+                newVideo.controls = true;
+                newVideo.autoplay = true;
+                newVideo.style.maxWidth = '90vw';
+                newVideo.style.maxHeight = '80vh';
+                container.appendChild(newVideo);
+            } else if (img) {
+                const newImg = document.createElement('img');
+                newImg.src = img.src;
+                newImg.style.maxWidth = '90vw';
+                newImg.style.maxHeight = '80vh';
+                newImg.style.objectFit = 'contain';
+                container.appendChild(newImg);
+            }
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+    </script>
+
+   
+</body>
+</html>
